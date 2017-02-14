@@ -1,1 +1,5 @@
 prepros-6.config
+node_modules/
+css/
+.DS_STORE
+html/
