@@ -1,0 +1,17 @@
+console.log(
+"HHHHHHHHH     HHHHHHHHH               AAA         TTTTTTTTTTTTTTTTTTTTTTT       CCCCCCCCCCCCC XXXXXXX       XXXXXXX \n",
+"H:::::::H     H:::::::H              A:::A        T:::::::::::::::::::::T    CCC::::::::::::C X:::::X       X:::::X \n",
+"H:::::::H     H:::::::H             A:::::A       T:::::::::::::::::::::T  CC:::::::::::::::C X:::::X       X:::::X \n",
+"HH::::::H     H::::::HH            A:::::::A      T:::::TT:::::::TT:::::T C:::::CCCCCCCC::::C X::::::X     X::::::X \n",
+"  H:::::H     H:::::H             A:::::::::A     TTTTTT  T:::::T  TTTTTTC:::::C       CCCCCC XXX:::::X   X:::::XXX \n",
+"  H:::::H     H:::::H            A:::::A:::::A            T:::::T       C:::::C                  X:::::X X:::::X    \n",
+"  H::::::HHHHH::::::H           A:::::A A:::::A           T:::::T       C:::::C                   X:::::X:::::X     \n",
+"  H:::::::::::::::::H          A:::::A   A:::::A          T:::::T       C:::::C                    X:::::::::X      \n",
+"  H:::::::::::::::::H         A:::::A     A:::::A         T:::::T       C:::::C                     X:::::::::X      \n",
+"  H::::::HHHHH::::::H        A:::::AAAAAAAAA:::::A        T:::::T       C:::::C                   X:::::X:::::X     \n",
+"  H:::::H     H:::::H       A:::::::::::::::::::::A       T:::::T       C:::::C                  X:::::X X:::::X    \n",
+"  H:::::H     H:::::H      A:::::AAAAAAAAAAAAA:::::A      T:::::T        C:::::C       CCCCCC   XXX:::::X   X:::::XXX \n",
+"HH::::::H     H::::::HH   A:::::A             A:::::A   TT:::::::TT       C:::::CCCCCCCC::::C X::::::X       X::::::X \n",
+"H:::::::H     H:::::::H  A:::::A               A:::::A  T:::::::::T        CC:::::::::::::::C X:::::X         X:::::X \n",
+"H:::::::H     H:::::::H A:::::A                 A:::::A T:::::::::T          CCC::::::::::::C X:::::X          X:::::X \n",
+"HHHHHHHHH     HHHHHHHHHAAAAAAA                   AAAAAAATTTTTTTTTTT             CCCCCCCCCCCCC XXXXXXX          XXXXXXX");

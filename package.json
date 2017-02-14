@@ -1,0 +1,18 @@
+{
+  "name": "hatcx_cost",
+  "version": "1.0.0",
+  "description": "\"A marketin site for hatcxCost\"",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "gulp-pug": "^3.2.0",
+    "gulp-sass": "^3.1.0"
+  },
+  "scripts": {
+    "test": "gulp"
+  },
+  "author": "",
+  "license": "ISC"
+}

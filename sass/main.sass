@@ -1,0 +1,77 @@
+@charset "utf-8"
+// 1. :-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-: Variables
+
+// Fonts
+
+$header-font: 'Archer A', 'Archer B', 'Roboto Slab', 'Times New Roman', serif
+$body-font: 'Verlag A', 'Verlag B', 'Avenir Next', 'Helvetica', Arial, sans-serif
+
+// Colors
+
+$white: white
+$black: #303030
+$sky: #2DCCD3
+$teal: #0097A9
+$denim: #071D49
+$strawberry: #FF585D
+$mustard: #F0B323
+$carrot: #EA7600
+$slate: #888B8D
+$cloud: #C8C9C7
+
+
+// 2. :-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-: Mixins
+
+@mixin square($n)
+  height: $n
+  width: $n
+
+@mixin not-phones
+  @media screen and (min-width: 768px)
+    @content
+@mixin not-tablets
+  @media screen and (min-width: 992px)
+    @content
+@mixin not-desktop
+  @media screen and (min-width: 1200px)
+    @content
+
+@mixin phones
+  @media screen and (max-width: 768px)
+    @content
+@mixin tablets
+  @media screen and (max-width: 992px)
+    @content
+@mixin desktop
+  @media screen and (max-width: 1200px)
+    @content
+
+@mixin bg($path)
+  background-image: url($path)
+
+@mixin grid($w)
+  width: #{$w + '%'}
+  display: inline-block
+
+@each $width in ((10)(20)(25)(30)(33)(40)(50)(60)(70)(75)(100))
+  .col_#{$width}
+    +grid($width)
+
+// 3. :-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-: Vendor Imports
+
+@import "_vendors/normalize"
+@import "_vendors/bourbon/bourbon"
+//@import "_vendors/avalanche"
+
+// 3. :-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-: Partials
+
+section.one
+  height: 100vh
+  width: 100%
+  background: url(/img/bg_s1.png)
+  background-size: cover
+  +display(flex)
+  +align-items(center)
+  +justify-content(center)
+.iphone_1
+  width: 100%
