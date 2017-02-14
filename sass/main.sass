@@ -63,15 +63,61 @@ $cloud: #C8C9C7
 @import "_vendors/bourbon/bourbon"
 //@import "_vendors/avalanche"
 
-// 3. :-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-: Partials
+// 4. :-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-: Partials
+@import "animation"
+// 5. :-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-: Base Styles
+*
+  //font-size: 15px
 
-section.one
-  height: 100vh
-  width: 100%
+body
+  font-family: $body-font
+
+@each $element in (h1,h2,h3,h4,h5,h6)
+  #{$element}
+    font-family: $header-font
+
+.sr_only
+  position: absolute
+  width: 1px
+  height: 1px
+  padding: 0
+  margin: -1px
+  overflow: hidden
+  clip: rect(0,0,0,0)
+  border: 0
+
+section
+  height: calc(100vh - 2rem)
+  width: calc(100% -4rem)
+  padding: 2rem
+
+// ^*^*^*^*^*^*^*^*^ Section 1
+.s1
   background: url(/img/bg_s1.png)
   background-size: cover
   +display(flex)
   +align-items(center)
   +justify-content(center)
+  color: $denim
+  text-align: right
+  h2
+    font-family: $body-font
+    font-size: 3rem
+    font-weight: normal
+  p
+    font-size: 2.5rem
+
+
 .iphone_1
   width: 100%
+  +filter(drop-shadow(2px 3px 3px black))
+  +animation(dope 12s infinite)
+.store_btns
+  max-width: 40%
+  +display(flex)
+  +align-self(flex-end)
+.as_btn
+  display: inline-block
+  height: 70px
+  width: calc(50% - 1rem)
+  margin-right: 1rem

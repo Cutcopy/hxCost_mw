@@ -1,10 +1,15 @@
-section.grid.one
+section.s1
   .col_30
     img(src="/img/Iphone_results.png" class="iphone_1")
   .col_70
     include ../../img/hatcx_cost_logo.svg
-    p Take control of your healthcare costs
+    h1.sr_only Hatcx Cost
+    h2 Take control of your healthcare costs
     p A new app from your friends at Hatcx
-  .store_icons
-    button Apple store
-    button Play Store
+    .store_btns
+      a.as_btn.iOS(href="#")
+        include ../../img/apple_store.svg
+        span.sr_only Apple store
+      a.as_btn.gplay(href="#")
+        include ../../img/gplay.svg
+        span.sr_only Play Store
