@@ -1,17 +1,35 @@
-console.log(
-"HHHHHHHHH     HHHHHHHHH               AAA         TTTTTTTTTTTTTTTTTTTTTTT       CCCCCCCCCCCCC XXXXXXX       XXXXXXX \n",
-"H:::::::H     H:::::::H              A:::A        T:::::::::::::::::::::T    CCC::::::::::::C X:::::X       X:::::X \n",
-"H:::::::H     H:::::::H             A:::::A       T:::::::::::::::::::::T  CC:::::::::::::::C X:::::X       X:::::X \n",
-"HH::::::H     H::::::HH            A:::::::A      T:::::TT:::::::TT:::::T C:::::CCCCCCCC::::C X::::::X     X::::::X \n",
-"  H:::::H     H:::::H             A:::::::::A     TTTTTT  T:::::T  TTTTTTC:::::C       CCCCCC XXX:::::X   X:::::XXX \n",
-"  H:::::H     H:::::H            A:::::A:::::A            T:::::T       C:::::C                  X:::::X X:::::X    \n",
-"  H::::::HHHHH::::::H           A:::::A A:::::A           T:::::T       C:::::C                   X:::::X:::::X     \n",
-"  H:::::::::::::::::H          A:::::A   A:::::A          T:::::T       C:::::C                    X:::::::::X      \n",
-"  H:::::::::::::::::H         A:::::A     A:::::A         T:::::T       C:::::C                     X:::::::::X      \n",
-"  H::::::HHHHH::::::H        A:::::AAAAAAAAA:::::A        T:::::T       C:::::C                   X:::::X:::::X     \n",
-"  H:::::H     H:::::H       A:::::::::::::::::::::A       T:::::T       C:::::C                  X:::::X X:::::X    \n",
-"  H:::::H     H:::::H      A:::::AAAAAAAAAAAAA:::::A      T:::::T        C:::::C       CCCCCC   XXX:::::X   X:::::XXX \n",
-"HH::::::H     H::::::HH   A:::::A             A:::::A   TT:::::::TT       C:::::CCCCCCCC::::C X::::::X       X::::::X \n",
-"H:::::::H     H:::::::H  A:::::A               A:::::A  T:::::::::T        CC:::::::::::::::C X:::::X         X:::::X \n",
-"H:::::::H     H:::::::H A:::::A                 A:::::A T:::::::::T          CCC::::::::::::C X:::::X          X:::::X \n",
-"HHHHHHHHH     HHHHHHHHHAAAAAAA                   AAAAAAATTTTTTTTTTT             CCCCCCCCCCCCC XXXXXXX          XXXXXXX");
+// Init ScrollMagic
+// var ctrl = new ScrollMagic.Controller({
+//   globalSceneOptions: {
+//     triggerHook: 'onLeave'
+//   }
+// });
+//
+// // Create scene
+// $("section").each(function() {
+//
+//   var name = $(this).attr('id');
+//
+//   new ScrollMagic.Scene({
+//     triggerElement: this
+//   })
+//   .setPin(this)
+//   .addIndicators({
+//     colorStart: "rgba(255,255,255,0.5)",
+//     colorEnd: "rgba(255,255,255,0.5)",
+//     colorTrigger : "rgba(255,255,255,1)",
+//     name:name
+// 	})
+//   .loglevel(3)
+//   .addTo(ctrl);
+//
+// });
+//
+// // Get window height
+// var wh = window.innerHeight;
+//
+// new ScrollMagic.Scene({
+//   offset: wh*3
+// })
+// .setClassToggle("section.s1", "is-active")
+// .addTo(ctrl);

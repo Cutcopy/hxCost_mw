@@ -1,10 +1,12 @@
 section.s2
-  .col_30
-    img(src="/img/f_hand_w_phone.png" class="phone_hand")
-  .col_70
+  //- .col_30
+  //-   img(src="/img/f_hand_w_phone.png" class="phone_hand")
+  .col_70.h_text
     h2 Be In control
-    p HATCX cost is the revolutionary new way to save on money on hundreds of common healthcare services.
-    p You yourself can find the closest and most affordable care, integrating with your insurance plan for reliable, personalized results.
-    .Play
-      button Play
-      span See How It Works
+    .indent
+      p HATCX cost is the revolutionary new way to save on money on hundreds of common healthcare services.
+      p You yourself can find the closest and most affordable care, integrating with your insurance plan for reliable, personalized results.
+      .playContainer
+        a#play-link
+          include ../../img/playbutton.svg
+        span See How It Works!

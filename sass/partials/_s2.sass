@@ -1,11 +1,45 @@
 .s2
   color: white
+  font-size: 2rem
+  font-weight: 100
+  letter-spacing: 1px
   +display(flex)
+  +align-items(center)
+  +justify-content(flex-end)
+  //padding-top: 4rem
+  background: url(/img/f_hand_w_phone.png)
+  background-size: contain
+  background-repeat: no-repeat
+  background-position: left
   h2
     font-size: 10rem
     font-weight: normal
-  p
-    margin-left: 4rem
-    font-size: 2rem
+    margin: 0 0 1rem 0
+
+.h_text
+  //margin-top: 4rem
 .phone_hand
-  width: 100%
+  height: 100%
+
+.indent
+  margin-left: 4rem
+
+.playContainer
+  +display(flex)
+  +align-items(center)
+  +justify-content(flex-start)
+  margin-top: 4rem
+  font-family: $header-font
+  font-style: italic
+
+.playButton
+  width: 4rem
+  margin-right: 1rem
+  display: inline-block
+
+#playTriangle
+  fill: #fff
+#playOval
+  stroke: #fff
+  stroke-width: 2px
+  fill: none
