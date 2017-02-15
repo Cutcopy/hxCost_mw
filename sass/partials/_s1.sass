@@ -1,0 +1,56 @@
+// ^*^*^*^*^*^*^*^*^ Section 1
+.s1
+  background: url(/img/bg_s1.png)
+  background-size: cover
+  +display(flex)
+  +align-items(center)
+  +justify-content(center)
+  color: $denim
+  text-align: right
+  h2
+    font-family: $body-font
+    font-size: 3rem
+    font-weight: normal
+  p
+    font-size: 2.5rem
+
+// Big main iphone shot
+.iphone_1
+  width: 100%
+  max-width: 44rem
+  +animation(float 12s infinite)
+
+
+// Download buttons
+.store_btns
+  //max-width: 60%
+  width: 100%
+  +display(flex)
+  +align-self(center)
+  +align-items(flex-end)
+  +align-content(flex-end)
+  +justify-content(flex-end)
+.as_btn
+  display: inline-block
+  height: 70px
+  width: calc(30% - 1rem)
+  svg
+    fill: $denim
+    +transition(1s)
+    .ap-bg
+      fill: none
+      +transition(0.1s)
+  &:focus
+    outline: none
+  &:hover
+    svg
+      fill: $white
+      mix-blend-mode: multiply
+      .ap-bg
+        fill: $denim
+        stroke: $denim
+      .ap-border
+        fill: $denim
+
+.as_btn.iOS
+    margin-right: 1rem

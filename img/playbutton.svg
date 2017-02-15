@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 55" class="playButton">
+    <defs>
+        <style>
+            .cls-1{fill:none;stroke:#000;stroke-miterlimit:10}
+        </style>
+    </defs>
+    <title>
+        playbutton
+    </title>
+    <g id="playbutton">
+        <path id="Triangle" d="M43.13 27.5L19.96 39.08V15.92L43.13 27.5z"/>
+        <circle id="Oval" class="cls-1" cx="27.5" cy="27.5" r="27"/>
+    </g>
+</svg>

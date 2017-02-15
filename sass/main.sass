@@ -59,13 +59,11 @@ $cloud: #C8C9C7
 
 // 3. :-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-: Vendor Imports
 
-@import "_vendors/normalize"
-@import "_vendors/bourbon/bourbon"
+@import "vendors/normalize"
+@import "vendors/bourbon/bourbon"
 //@import "_vendors/avalanche"
 
-// 4. :-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-: Partials
-@import "animation"
-// 5. :-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-: Base Styles
+// 4. :-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-: Base Styles
 *
   //font-size: 15px
 
@@ -88,36 +86,18 @@ body
 
 section
   height: calc(100vh - 2rem)
-  width: calc(100% -4rem)
+  width: calc(100% - 4rem)
   padding: 2rem
 
-// ^*^*^*^*^*^*^*^*^ Section 1
-.s1
-  background: url(/img/bg_s1.png)
-  background-size: cover
-  +display(flex)
-  +align-items(center)
-  +justify-content(center)
-  color: $denim
-  text-align: right
-  h2
-    font-family: $body-font
-    font-size: 3rem
-    font-weight: normal
-  p
-    font-size: 2.5rem
 
+.gradient
+  //background: radial-gradient($white 1%, $sky, $denim 60%)
+  background-image: radial-gradient(50% 50%, #5AD7DD 1%, #5AD7DD 9%, #2DCCD3 17%, #071D49 87%);
 
-.iphone_1
-  width: 100%
-  +filter(drop-shadow(2px 3px 3px black))
-  +animation(dope 12s infinite)
-.store_btns
-  max-width: 40%
-  +display(flex)
-  +align-self(flex-end)
-.as_btn
-  display: inline-block
-  height: 70px
-  width: calc(50% - 1rem)
-  margin-right: 1rem
+// 5. :-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-: Partials
+
+@import "partials/animation"
+@import "partials/s1"
+@import "partials/s2"
+@import "partials/s3"
+@import "partials/s4"
