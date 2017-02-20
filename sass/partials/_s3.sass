@@ -1,0 +1,81 @@
+.section.three
+  color: white
+  +display(flex)
+  padding: 4rem
+  h2
+    font-size: 10rem
+    font-weight: 100
+    margin-bottom: 2rem
+  p
+    font-size: 2rem
+.socialbuttons
+  margin-top: 5rem
+  .Icon
+    cursor: pointer
+    svg
+      +transition(0.3s)
+      fill: white
+      max-width: +rem(100px)
+      &:hover
+        fill: $denim
+        stroke: white
+        stroke-width: 1px
+    &.fb
+      margin-right: 1rem
+.bgWrapper
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  z-index: -1
+  background: url(../img/Fullsquares.svg)
+  background-size: cover
+  opacity: 0.4
+  background-attachment: fixed
+
+.fp-viewing-Know
+  .bgWrapper
+     animation: scrollex 1s
+.o_wrapper
+  position: relative
+  right: $sectionPadding
+  bottom: $sectionPadding * 2
+.onion
+  position: absolute
+  right: 4rem
+  top: 5rem
+  +transition(1.5s ease)
+  img
+    width: 100%
+    max-width: +rem(900px)
+.onion.scn1
+  z-index: 2
+.onion.scn2
+  z-index: 3
+  top: 6.3rem
+  right: 7rem
+  +filter(drop-shadow(0px 0px 0px rgba(0,0,0,0.8)))
+.onion.scn3
+  z-index: 4
+  top: 13rem
+  right: 7rem
+  +filter(drop-shadow(0px 0px 0px rgba(0,0,0,0.8)))
+
+.fp-viewing-Know
+  .onion.scn2
+    z-index: 3
+    top: 2rem
+    right: 5rem
+    +filter(drop-shadow(0px 0px 15px rgba(0,0,0,0.8)))
+  .onion.scn3
+    z-index: 4
+    top: 2rem
+    right: 5rem
+    +filter(drop-shadow(0px 0px 15px rgba(0,0,0,0.8)))
+
+@keyframes scrollex
+  from
+    background-position: -10px
+  to
+    background-position: top

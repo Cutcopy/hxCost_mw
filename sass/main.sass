@@ -19,7 +19,7 @@ $carrot: #EA7600
 $slate: #888B8D
 $cloud: #C8C9C7
 
-
+$sectionPadding: 3rem !default
 // 2. :-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-: Mixins
 
 @mixin square($n)
@@ -30,9 +30,11 @@ $cloud: #C8C9C7
 @mixin not-phones
   @media screen and (min-width: 768px)
     @content
+
 @mixin not-tablets
   @media screen and (min-width: 992px)
     @content
+
 @mixin not-desktop
   @media screen and (min-width: 1200px)
     @content
@@ -41,15 +43,20 @@ $cloud: #C8C9C7
 @mixin phones
   @media screen and (max-width: 768px)
     @content
+
 @mixin tablets
   @media screen and (max-width: 992px)
     @content
+
 @mixin desktop
   @media screen and (max-width: 1200px)
     @content
 
 @mixin bg($path)
   background-image: url($path)
+
+@mixin gradient
+  background-image: radial-gradient(50% 30%, #5AD7DD 1%, #5AD7DD 9%, #2DCCD3 17%, #071D49 87%)
 
 @mixin grid($w)
   width: #{$w + '%'}
@@ -58,20 +65,29 @@ $cloud: #C8C9C7
 @each $width in ((10)(20)(25)(30)(33)(40)(50)(60)(70)(75)(100))
   .col_#{$width}
     +grid($width)
+  +phones
+    .col_#{$width}
+      width: 100%    
+
 
 // 3. :-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-: Vendor Imports
 
 @import "vendors/normalize"
+@import "vendors/fullpage"
 @import "vendors/bourbon/bourbon"
 //@import "_vendors/avalanche"
 
 // 4. :-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-: Base Styles
 *
   //font-size: 15px
+  box-sizing: border-box
 
 body
   font-family: $body-font
-
+  font-weight: 100
+  line-height: 1.5
+  letter-spacing: 2px
+  +gradient
 @each $element in (h1,h2,h3,h4,h5,h6)
   #{$element}
     font-family: $header-font
@@ -87,19 +103,67 @@ body
   border: 0
 
 section
-  height: calc(100vh - 2rem)
-  width: calc(100% - 4rem)
-  padding: 2rem
+  //height: calc(100vh - 2rem)
+  //width: calc(100% - 4rem)
+  padding: $sectionPadding
 
+// Download buttons
+.store_btns
+  //max-width: 60%
+  width: 100%
+  height: 100px
+  z-index: 5
+  position: fixed
+  bottom: +rem(100px)
+  right: 3rem
+  +display(flex)
+  +align-self(center)
+  +align-items(flex-end)
+  +align-content(flex-end)
+  +justify-content(flex-end)
+.as_btn
+  display: inline-block
+  //height: 70px
+  //width: calc(30% - 1rem)
+  cursor: pointer
+  max-width: 400px
+  width: 100%
+  svg
+    fill: $denim
+    //max-height: 100px
+    +transition(0.3s)
+    .ap-bg
+      fill: none
+      +transition(0.3s)
+    .ap-border
+      +transition(0.3s)
+  &:focus
+    outline: none
+  &:hover
+    svg
+      fill: $white
+      mix-blend-mode: multiply
+      .ap-bg
+        fill: $denim
+        stroke: $denim
+      .ap-border
+        fill: $denim
 
-.gradient
-  //background: radial-gradient($white 1%, $sky, $denim 60%)
-  background-image: radial-gradient(50% 50%, #5AD7DD 1%, #5AD7DD 9%, #2DCCD3 17%, #071D49 87%);
+.as_btn.iOS
+    margin-right: 1rem
 
+.fp-viewing-BeInControl, .fp-viewing-Know
+  .as_btn
+    svg
+      fill: white
+      &:hover
+        fill: $sky
+        .ap-border
+          fill: $sky
 // 5. :-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-: Partials
 
-@import "partials/animation"
 @import "partials/s1"
 @import "partials/s2"
 @import "partials/s3"
 @import "partials/s4"
+@import "partials/mobile"

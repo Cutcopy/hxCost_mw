@@ -1,4 +1,4 @@
-.s4
+.four
   background-color: $teal
   background-image: url(../img/bg_s1.png)
   background-size: cover
@@ -12,3 +12,63 @@
   p
     text-align: center
     line-height: 2
+
+// - form
+.mailCap
+  width: 100%
+  max-width: +rem(1500px)
+  +filter(drop-shadow(0px 0px 5px transparentize($denim, 0.4)))
+  +display(flex)
+  +justify-content(center)
+  input
+    display: inline-block
+    padding: 1.5rem
+    border-radius: 50px
+    border: none
+    font-weight: 100
+    letter-spacing: 2px
+    +transition(0.3s)
+  input[type="email"]
+    width: 80%
+    color: $teal
+    &:focus
+      border-radius: 0
+      background: rgba(255,255,255,0.5)
+      color: white
+      +placeholder
+        color: transparent
+    +placeholder
+      color: $teal
+  input[type="submit"]
+    width: 20%
+    border: 2px solid $denim
+    background: $denim
+    color: white
+    margin-left: -4.5rem
+    // position: relative
+    // right: 4.5rem
+    padding: 1.7rem
+    &:hover
+      background: lighten($denim, 20%)
+    &:focus
+      outline: none
+
+.attribution
+  //width: 100%
+  position: absolute
+  bottom: 0
+  left: $sectionPadding
+  span
+    display: inline-block
+    width: 100px
+    margin-left: 1rem
+
+.fp-viewing-signUp
+  .mailCap
+    +animation(expand 2s ease)
+
++keyframes(expand)
+  from
+    width: 0%
+  to
+    width: 100%
