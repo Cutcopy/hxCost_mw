@@ -49,7 +49,7 @@ $(document).ready(function() {
         verticalCentered: false,
         //sectionsColor : ['#ccc', '#fff'],
         padding: '3em',
-        fixedElements: '.store_btns',
+        //fixedElements: '.store_btns',
         responsiveWidth: 0,
         responsiveHeight: 0,
         responsiveSlides: false,

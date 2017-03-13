@@ -9,10 +9,17 @@
   +justify-content(center)
   +align-items(center)
   +flex-direction(column)
+  +phones
+    +align-items(flex-start)
+    +align-content(flex-start)
+    +justify-content(space-around)
+    font-size: 0.7rem
+    font-weight: normal
+  .cost_logo
+    +filter(drop-shadow(0px 0px 5px transparentize($denim, 0.4)))
   p
     text-align: center
     line-height: 2
-
 // - form
 .mailCap
   width: 100%
@@ -20,6 +27,8 @@
   +filter(drop-shadow(0px 0px 5px transparentize($denim, 0.4)))
   +display(flex)
   +justify-content(center)
+  +phones
+    max-width: 100%
   input
     display: inline-block
     padding: 1.5rem
@@ -28,6 +37,8 @@
     font-weight: 100
     letter-spacing: 2px
     +transition(0.3s)
+    +phones
+      width: 100%
   input[type="email"]
     width: 80%
     color: $teal
@@ -53,11 +64,16 @@
     &:focus
       outline: none
 
+
 .attribution
   //width: 100%
   position: absolute
   bottom: 0
   left: $sectionPadding
+  +phones
+    text-align: center
+    position: relative
+    width: 100%
   span
     display: inline-block
     width: 100px

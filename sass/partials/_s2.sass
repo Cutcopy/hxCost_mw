@@ -5,18 +5,18 @@
   +display(flex)
   +align-items(center)
   +justify-content(flex-end)
-  //background-color: $denim
-  //+gradient
-  //padding-top: 4rem
-  //+gradient
-  // background-size: contain
-  // background-repeat: no-repeat
-  // background-position: left
+  +phones
+    +flex-direction(column-reverse)
+    +align-items(flex-start)
+    +align-content(flex-start)
+    +justify-content(flex-end)
+    font-weight: normal
   h2
     font-size: 10rem
     font-weight: normal
     margin: 0 0 1rem 0
-
+    +phones
+      font-size: 2.5rem
 .h_text
   //margin-top: 4rem
 .phone_hand
@@ -29,6 +29,14 @@
   +transition(0.7s)
   +transform(rotate(-30deg))
   +transform-origin(center right)
+  +phones
+    display: block
+    width: 50%
+    margin: 0 auto
+    //position: relative
+    bottom: 0
+    left: 20%
+    opacity: 0.4
 
 .fp-viewing-BeInControl, .fp-viewing-Know
   .phone_hand
@@ -38,6 +46,9 @@
   margin-left: 4rem
   font-size: 3rem
   max-width: 90rem
+  +phones
+    font-size: 1rem
+    margin-left: 1rem
 .playContainer
   +display(flex)
   +align-items(center)
@@ -52,11 +63,18 @@
       stroke: $denim
 #play-link
   cursor: pointer
+  +transition(0.3s)
+  &:hover
+    color: $denim
 .playButton
   width: 4rem
   margin-right: 1rem
   display: inline-block
+  position: relative
+  top: 0.5rem
   cursor: pointer
+  +phones
+    width: 2rem
   &:not(:root)
     overflow: visible
 #playTriangle
